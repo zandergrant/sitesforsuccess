@@ -1,52 +1,170 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
+/* --- SITES FOR SUCCESS: ADVANCED STYLESHEET --- */
+/* Inspired by bbbs.org */
+
+/* --- 1. Variables & General Styles --- */
+:root {
+    --primary-purple: #5b2d90;
+    --accent-teal: #00a99d;
+    --dark-text: #333333;
+    --light-text: #ffffff;
+    --body-bg: #f9f9f9;
+    --card-bg: #ffffff;
+    --border-color: #eeeeee;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--body-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-purple);
+}
+
+/* --- 2. Header & Navigation --- */
 header {
-    background-color: #f2f2f2;
-    padding: 20px;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary-purple);
+    text-decoration: none;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
+nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--dark-text);
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #e6e6e6;
+nav a:not(.button):hover {
+    color: var(--primary-purple);
 }
 
-.cta-button {
+/* --- 3. Buttons --- */
+.button {
+    padding: 10px 25px;
+    border-radius: 50px; /* pill-shaped */
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
     display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 20px;
+    border: 2px solid transparent;
 }
 
-footer {
+.button-primary {
+    background-color: var(--accent-teal);
+    color: var(--light-text);
+}
+
+.button-primary:hover {
+    background-color: #008a7e;
+    transform: translateY(-2px);
+}
+
+.button-secondary {
+    background-color: var(--light-text);
+    color: var(--primary-purple);
+    border-color: var(--primary-purple);
+}
+
+.button-secondary:hover {
+    background-color: var(--primary-purple);
+    color: var(--light-text);
+    transform: translateY(-2px);
+}
+
+
+/* --- 4. Hero Section --- */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1184&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: var(--light-text);
     text-align: center;
-    padding: 20px;
-    background-color: #f2f2f2;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* --- 5. Main Content --- */
+.content-section {
+    padding: 80px 0;
+    background-color: var(--card-bg);
+}
+
+/* --- 6. Footer --- */
+footer {
+    background-color: var(--dark-text);
+    color: #a0a0a0;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* --- 7. Responsive Design --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
