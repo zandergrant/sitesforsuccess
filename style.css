@@ -1,4 +1,6 @@
+/* --- SITES FOR SUCCESS: COMPLETE STYLESHEET --- */
 
+/* --- 1. Variables & General Styles --- */
 :root {
     --primary-purple: #5b2d90;
     --accent-teal: #00a99d;
@@ -15,6 +17,7 @@ body {
     background-color: var(--body-bg);
     color: var(--dark-text);
     line-height: 1.6;
+    font-size: 17px; /* Increased base font size */
 }
 
 .container {
@@ -139,10 +142,43 @@ nav a:not(.button):hover {
 /* --- 5. Main Content --- */
 .content-section {
     padding: 80px 0;
-    background-color: var(--card-bg);
 }
 
-/* --- 6. Footer --- */
+/* --- 6. "How It Works" Section Cards --- */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
+    gap: 30px; /* Space between the cards */
+    margin-top: 50px;
+}
+
+.step {
+    background-color: var(--card-bg);
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Soft shadow for a "lifted" feel */
+    aspect-ratio: 1 / 1; /* Makes the card a perfect square */
+    
+    /* These next lines center the content vertically inside the square */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.step h3 {
+    margin-top: 0;
+    color: var(--primary-purple);
+}
+
+.step-emoji {
+    font-size: 4rem; /* Makes the emoji large like an icon */
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+/* --- 7. Footer --- */
 footer {
     background-color: var(--dark-text);
     color: #a0a0a0;
@@ -150,7 +186,18 @@ footer {
     text-align: center;
 }
 
-/* --- 7. Responsive Design --- */
+/* --- 8. Responsive Design --- */
+@media (max-width: 900px) {
+    .steps-grid {
+        grid-template-columns: 1fr; /* Stack cards on top of each other on smaller screens */
+    }
+    
+    .step {
+        aspect-ratio: auto; /* Let the card height be determined by its content on mobile */
+        margin-bottom: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     h1 { font-size: 2.2em; }
     h2 { font-size: 1.8em; }
