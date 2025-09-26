@@ -147,8 +147,8 @@ nav a:not(.button):hover {
 /* --- 6. "How It Works" Section Cards --- */
 .steps-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
-    gap: 30px; /* Space between the cards */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     margin-top: 50px;
 }
 
@@ -156,11 +156,9 @@ nav a:not(.button):hover {
     background-color: var(--card-bg);
     padding: 30px;
     text-align: center;
-    border-radius: 8px; /* Slightly rounded corners */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Soft shadow for a "lifted" feel */
-    aspect-ratio: 1 / 1; /* Makes the card a perfect square */
-    
-    /* These next lines center the content vertically inside the square */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,7 +171,7 @@ nav a:not(.button):hover {
 }
 
 .step-emoji {
-    font-size: 4rem; /* Makes the emoji large like an icon */
+    font-size: 4rem;
     line-height: 1;
     margin-bottom: 20px;
 }
@@ -184,65 +182,29 @@ nav a:not(.button):hover {
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     border-radius: 8px;
     padding: 40px;
-    list-style-type: none; /* Removes the default black dots */
+    list-style-type: none;
     margin-top: 50px;
-    max-width: 700px; /* Keeps the card from getting too wide on large screens */
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .features-list li {
     font-weight: 600;
-    margin-bottom: 15px; /* Adds space between each feature */
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
 }
 
-/* This creates a custom, colored checkmark before each list item */
 .features-list li::before {
-    content: '✔'; /* The checkmark character */
-    color: var(--accent-teal); /* Uses the accent color from your theme */
+    content: '✔';
+    color: var(--accent-teal);
     font-size: 1.5em;
     margin-right: 15px;
     line-height: 1;
 }
 
-/* --- 8. Footer --- */
-footer {
-    background-color: var(--dark-text);
-    color: #a0a0a0;
-    padding: 40px 0;
-    text-align: center;
-}
-
-/* --- 9. Responsive Design --- */
-@media (max-width: 900px) {
-    .steps-grid {
-        grid-template-columns: 1fr; /* Stack cards on top of each other on smaller screens */
-    }
-    
-    .step {
-        aspect-ratio: auto; /* Let the card height be determined by its content on mobile */
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    h1 { font-size: 2.2em; }
-    h2 { font-size: 1.8em; }
-
-    header .container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-/* --- UPDATE: "Who We Help" & "CTA" Section Cards --- */
-
+/* --- 8. "Who We Help" & "CTA" Section Cards --- */
 .audience-list {
     background-color: var(--card-bg);
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
@@ -275,11 +237,53 @@ footer {
     color: var(--light-text);
 }
 
-/* --- UPDATE: Winding Road Connector --- */
-
+/* --- 9. Winding Road Connector --- */
 .road-connector {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: -30px 0; /* Use negative margin to pull the sections closer to the line */
+    background-color: var(--body-bg);
+}
+
+.no-bottom-padding {
+    padding-bottom: 0;
+}
+
+.no-top-padding {
+    padding-top: 0;
+}
+
+/* --- 10. Footer --- */
+footer {
+    background-color: var(--dark-text);
+    color: #a0a0a0;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* --- 11. Responsive Design --- */
+@media (max-width: 900px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .step {
+        aspect-ratio: auto;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
