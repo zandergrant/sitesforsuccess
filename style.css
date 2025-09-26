@@ -211,4 +211,31 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+    .features-list {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    padding: 40px;
+    list-style-type: none; /* Removes the default black dots */
+    margin-top: 50px;
+    max-width: 700px; /* Keeps the card from getting too wide on large screens */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features-list li {
+    font-weight: 600;
+    margin-bottom: 15px; /* Adds space between each feature */
+    display: flex;
+    align-items: center;
+}
+
+/* This creates a custom, colored checkmark before each list item */
+.features-list li::before {
+    content: '✔'; /* The checkmark character */
+    color: var(--accent-teal); /* Uses the accent color from your theme */
+    font-size: 1.5em;
+    margin-right: 15px;
+    line-height: 1;
+}
 }
