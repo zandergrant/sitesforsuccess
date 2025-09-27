@@ -237,23 +237,7 @@ nav a:not(.button):hover {
     color: var(--light-text);
 }
 
-/* --- 9. Winding Road Connector --- */
-.road-connector {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--body-bg);
-}
-
-.no-bottom-padding {
-    padding-bottom: 0;
-}
-
-.no-top-padding {
-    padding-top: 0;
-}
-
-/* --- 10. Footer --- */
+/* --- 9. Footer --- */
 footer {
     background-color: var(--dark-text);
     color: #a0a0a0;
@@ -261,7 +245,7 @@ footer {
     text-align: center;
 }
 
-/* --- 11. Responsive Design --- */
+/* --- 10. Responsive Design --- */
 @media (max-width: 900px) {
     .steps-grid {
         grid-template-columns: 1fr;
