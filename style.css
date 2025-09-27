@@ -94,6 +94,7 @@ nav a:not(.button):hover {
     transition: all 0.3s ease;
     display: inline-block;
     border: 2px solid transparent;
+    cursor: pointer;
 }
 
 .button-primary {
@@ -107,7 +108,7 @@ nav a:not(.button):hover {
 }
 
 .button-secondary {
-    background-color: var(--light-text);
+    background-color: var(--card-bg);
     color: var(--primary-purple);
     border-color: var(--primary-purple);
 }
@@ -118,8 +119,19 @@ nav a:not(.button):hover {
     transform: translateY(-2px);
 }
 
+.button-primary-outline {
+    background-color: transparent;
+    color: var(--primary-purple);
+    border-color: var(--primary-purple);
+}
 
-/* --- 4. Hero Section --- */
+.button-primary-outline:hover {
+    background-color: var(--primary-purple);
+    color: var(--light-text);
+}
+
+
+/* --- 4. Hero Section & Page Headers --- */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1184&q=80');
     background-size: cover;
@@ -139,12 +151,53 @@ nav a:not(.button):hover {
     margin-bottom: 30px;
 }
 
-/* --- 5. Main Content --- */
+.page-hero {
+    background-color: var(--primary-purple);
+    text-align: center;
+    color: var(--light-text);
+}
+.page-hero h1 {
+    color: var(--light-text);
+}
+.page-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: -20px auto 0 auto;
+}
+
+
+/* --- 5. Main Content & Cards --- */
 .content-section {
     padding: 80px 0;
 }
 
-/* --- 6. "How It Works" Section Cards --- */
+.text-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.text-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.text-content li {
+    margin-bottom: 15px;
+    display: flex;
+}
+.text-content li::before {
+    content: '✓';
+    color: var(--accent-teal);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.mission-card {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    padding: 20px 40px;
+    margin-top: 40px;
+}
+
 .steps-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -176,8 +229,7 @@ nav a:not(.button):hover {
     margin-bottom: 20px;
 }
 
-/* --- 7. "What's Included" Section Card --- */
-.features-list {
+.features-list, .audience-list {
     background-color: var(--card-bg);
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     border-radius: 8px;
@@ -189,14 +241,14 @@ nav a:not(.button):hover {
     margin-right: auto;
 }
 
-.features-list li {
+.features-list li, .audience-list li {
     font-weight: 600;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
 }
 
-.features-list li::before {
+.features-list li::before, .audience-list li::before {
     content: '✔';
     color: var(--accent-teal);
     font-size: 1.5em;
@@ -204,40 +256,56 @@ nav a:not(.button):hover {
     line-height: 1;
 }
 
-/* --- 8. "Who We Help" & "CTA" Section Cards --- */
-.audience-list {
-    background-color: var(--card-bg);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    border-radius: 8px;
-    padding: 40px;
-    list-style-type: none;
-    margin-top: 50px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.audience-list li {
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
 .cta-section {
-    background-color: var(--primary-purple);
-    color: var(--light-text);
+    background-color: var(--card-bg);
     padding: 60px 0;
     text-align: center;
     border-radius: 8px;
+    border: 3px solid var(--primary-purple);
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 auto 80px auto; /* Added bottom margin for padding */
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
-
-.cta-section h2 {
-    color: var(--light-text);
+.cta-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* --- 9. Footer --- */
+/* --- 6. Contact Form --- */
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-purple);
+}
+
+/* --- 7. Footer --- */
 footer {
     background-color: var(--dark-text);
     color: #a0a0a0;
@@ -245,7 +313,7 @@ footer {
     text-align: center;
 }
 
-/* --- 10. Responsive Design --- */
+/* --- 8. Responsive Design --- */
 @media (max-width: 900px) {
     .steps-grid {
         grid-template-columns: 1fr;
