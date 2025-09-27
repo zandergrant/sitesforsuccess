@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sites for Success</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Sites for Success</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="donate.html" class="button button-primary">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="content-section page-hero">
+            <div class="container">
+                <h1>Our Mission is to Empower Yours</h1>
+                <p>We're dedicated to leveling the playing field, ensuring every nonprofit has the digital tools to thrive.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container text-content">
+                <h2>Our Story</h2>
+                <p>Sites for Success was founded on a simple but powerful idea: no nonprofit should be held back by technology or budget barriers. We saw countless small, impactful organizations struggling to be seen and heard in a digital world because professional web services were out of reach. We decided to close that gap by providing high-quality starter websites, completely free of charge.</p>
+
+                <h2>Our Vision</h2>
+                <p>We envision a world where every organization, regardless of its size or resources, can share its mission, attract supporters, and grow its impact online. We believe in technology as a force for good, creating an on-ramp for grassroots initiatives to connect, inspire, and build better communities.</p>
+
+                <h2>What Makes Us Different</h2>
+                <ul>
+                    <li><strong>Equity Focus:</strong> We prioritize under-resourced organizations that are typically left behind by costly web agencies.</li>
+                    <li><strong>Zero Hidden Costs:</strong> By using free platforms like GitHub Pages, we ensure there are no hosting fees or surprise bills for you or for us.</li>
+                    <li><strong>Scalable Model:</strong> Our clear, repeatable package allows us to help more nonprofits effectively and efficiently.</li>
+                    <li><strong>A Stepping Stone:</strong> We provide the perfect foundation. As you grow, you can "graduate" to more advanced features and platforms.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sites for Success. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
